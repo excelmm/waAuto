@@ -572,10 +572,10 @@ def forwardMessage(record, nameIncoming, receiver, messageText, messageNum, numb
     num = str((-1)*(messageNum - 1)) if messageNum > 1 else ''
     if sent:
         print("take from left")
-        x_arg = '(//div[@class="tSmQ1"]/div[contains(@data-id,"false")]/div/div)[last()]'
+        x_arg = '(//div[@class="tSmQ1"]/div[contains(@data-id,"false")]/div/div/div/div)[last()]'
     else:
         print("take from right")
-        x_arg = '(//div[@class="tSmQ1"]/div[contains(@data-id,"true")]/div/div)[last()]'
+        x_arg = '(//div[@class="tSmQ1"]/div[contains(@data-id,"true")]/div/div/div/div)[last()]'
 
     while True:
         action = ActionChains(driver)
