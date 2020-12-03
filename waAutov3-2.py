@@ -513,7 +513,6 @@ def sendMessage(message):
 
 
 def checkMessageInDatabase(nameIncoming, pos, left):
-    now = datetime.datetime.now()
     
     numIndex = str(pos)
     if pos == 0:
@@ -604,12 +603,8 @@ def forwardMessage(record, nameIncoming, receiver, messageText, messageNum, numb
 
     print(messageNum)
     if sent:
-        msgtime = '(//div[@class="tSmQ1"]/div[contains(@data-id,"false")]/div/div/div/div[2])[last()]'
-        # checkbox = driver.find_elements_by_xpath('//div[@class="z_tTQ"]/div[contains(@data-id,"false")]//div[@class="_2XWkx"]')
         checkbox = driver.find_elements_by_css_selector("div.message-in.focusable-list-item")
     else:
-        msgtime = '(//div[@class="tSmQ1"]/div[contains(@data-id,"true")]/div/div/div/div[2])[last()]'
-        # checkbox = driver.find_elements_by_xpath('//div[@class="z_tTQ"]/div[contains(@data-id,"true")]//div[@class="_2XWkx"]')
         checkbox = driver.find_elements_by_css_selector("div.message-out.focusable-list-item")
     
     if record:
