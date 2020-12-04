@@ -586,10 +586,10 @@ def forwardMessage(record, nameIncoming, receiver, messageText, messageNum, numb
         time.sleep(0.5)
     
         try:
-            driver.find_element_by_xpath('//div[@title="Forward all"]').click()
+            driver.find_element_by_xpath('//*[@title="Forward all"]').click()
         except:
             try:
-                driver.find_element_by_xpath('//div[@title="Forward message"]').click()
+                driver.find_element_by_xpath('//*[@title="Forward message"]').click()
                 break
             except:
                 videos = driver.find_elements_by_xpath('//*[contains(@class,"_3i3h7")]')

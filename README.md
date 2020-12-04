@@ -23,3 +23,4 @@ Written in Python, powered by Selenium.
 - Changed selenium class names due to a WhatsApp update
 #### 4-Dec:
 - Fixed targeting issue when forwarding
+- Changed 2 Forward Message *div* selectors to *** selectors
